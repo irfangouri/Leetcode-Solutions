@@ -1,0 +1,20 @@
+class Solution {
+public:
+    void moveZeroes(vector<int>& nums) {
+
+        int index = 0;
+
+        for(auto it : nums) {
+            if(it != 0) {
+                nums[index] = it;
+                index++;
+            }
+        }
+
+        while(index < nums.size()) {
+            nums[index] = 0;
+            index++;
+        }
+        
+    }
+};
