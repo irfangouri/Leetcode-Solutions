@@ -1,0 +1,15 @@
+class Solution {
+public:
+    int maximizeGreatness(vector<int>& nums) {
+        int res = 0;
+
+        sort(nums.begin(), nums.end());
+
+        for(auto it : nums)
+            if(it > nums[res]) 
+                res++;
+
+        return res;
+        
+    }
+};
